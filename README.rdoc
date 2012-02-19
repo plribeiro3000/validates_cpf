@@ -1,0 +1,19 @@
+= ValidatesCPF
+
+Rails gem to validate CPF
+
+== Install
+
+gem install validates_cpf
+
+== Usage
+
+Lets say you have a model with "cpf" string column that you want to be a valid CPF. Just add this to your model:
+
+class User < ActiveRecord::Base
+    validates :cpf, :cpf => true
+end
+
+== Special Thanks
+
+This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and macros for test it.
