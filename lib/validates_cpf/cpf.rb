@@ -1,23 +1,26 @@
 class CPF
   def initialize(number)
+    number =~ /^(\d{3}\.?\d{3}\.?\d{3})-?(\d{2})$/
     @number = number
+    @pure_number = $1
+    @result = $2
+    @cleaned_number = @pure_number.nil? ? nil : @number.gsub(/[\.-]/, "")
+    format_number! if @pure_number
   end
 
   def valid?
-    return false unless @number =~ /^(\d{3}\.?\d{3}\.?\d{3})-?(\d{2})$/
-    @pure_number = $1
-    @to_verify = $2
-    @valid = check_cpf
-    @number = (@valid ? format_number! : nil)
+    return true if @number.nil?
+    return false unless @pure_number
+    check_cpf
   end
 
-  private
+  def number
+    @number
+  end
 
   def check_cpf
-    @clear_number = number.gsub(/[\.\/-]/, "")
-    return false if @clear_number.length != 11
-    return false if @clear_number.scan(/\d/).uniq.length == 1
-    @to_verify == first_digit_verifier + second_digit_verifier(first_digit_verifier)
+    return false if @cleaned_number.length != 11 or @cleaned_number.scan(/\d/).uniq.length == 1
+    @result == first_digit_verifier + second_digit_verifier
   end
 
   def first_digit_verifier
@@ -25,7 +28,7 @@ class CPF
     digit_verifier(sum%11).to_s
   end
 
-  def second_digit_verifier(first_digit_verifier)
+  def second_digit_verifier
     sum = multiply_and_sum([11, 10, 9, 8, 7, 6, 5, 4, 3, 2], @pure_number + first_digit_verifier)
     digit_verifier(sum%11).to_s
   end
@@ -41,7 +44,7 @@ class CPF
   end
 
   def format_number!
-    @number =~ /(\d{3})\.?(\d{3})\.?(\d{3})-?(\d{2})/
+    @cleaned_number =~ /(\d{3})(\d{3})(\d{3})(\d{2})/
     @number = "#{$1}.#{$2}.#{$3}-#{$4}"
   end
 end
