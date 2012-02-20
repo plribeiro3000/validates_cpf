@@ -6,41 +6,36 @@ module Shoulda
       end
 
       class ValidateAsCpfMatcher < ValidationMatcher
-        include Helpers
-
         def initialize(attribute)
           @attribute = attribute
-        end
-
-        def with_message(message)
-          @message = message if message
-          self
         end
 
         def description
           "validate #{@attribute} as a valid CPF number"
         end
 
+        def failure_message
+          "expected #{@attribute} to be validated as a valid CPF number"
+        end
+
         def matches?(subject)
           super(subject)
 
-          disallows_invalid_value &&
-              allows_valid_value &&
-              allows_nil_value
+          disallows_invalid_value and allows_valid_value and allows_nil_value
         end
 
         private
 
         def disallows_invalid_value
-          disallows_value_of("123456", @message)
+          disallows_value_of("123456")
         end
 
         def allows_valid_value
-          allows_value_of("897.546.112-20", @message)
+          allows_value_of("897.546.112-20")
         end
 
         def allows_nil_value
-          allows_value_of(nil, @message)
+          allows_value_of(nil)
         end
       end
     end
