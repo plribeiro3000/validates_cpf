@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-require File.expand_path(File.dirname(__FILE__) + "/../../lib/validates_cpf/cpf")
-
 describe CPF do
   context "should be invalid with" do
     it "blank number" do

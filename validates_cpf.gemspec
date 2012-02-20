@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.description = %q{Validates CPF, the simple way.}
 
   s.add_dependency("activerecord", ">= 3.0.0")
+  s.add_dependency("shoulda-matchers")
 
   s.rubyforge_project = "validates_cpf"
 

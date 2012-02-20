@@ -1,5 +1,4 @@
 require 'spec_helper'
-require File.expand_path(File.dirname(__FILE__) + "/fake_app/user")
 
 describe CpfValidator do
   context "when cpf is invalid" do
