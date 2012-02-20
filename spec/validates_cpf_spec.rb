@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 require File.expand_path(File.dirname(__FILE__) + "/fake_app/user")
 
 describe CpfValidator do
@@ -14,7 +13,7 @@ describe CpfValidator do
 
     it "should set an error on attribute" do
       @user.valid?
-      @user.errors[:cpf].should == [:invalid]
+      @user.errors[:cpf].should == ['is invalid']
     end
   end
 
