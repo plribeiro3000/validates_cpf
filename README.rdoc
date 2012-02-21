@@ -1,6 +1,6 @@
 = ValidatesCPF {<img src="https://secure.travis-ci.org/plribeiro3000/validates_cpf.png" />}[http://travis-ci.org/plribeiro3000/validates_cpf]
 
-Rails gem to validate CPF. Don't forget to check {ValidatesCnpj}[https://github.com/plribeiro3000/validates_cnpj].
+Rails gem to validate CPF. Don't forget to check {ValidatesCnpj}[https://github.com/plribeiro3000/validates_cnpj] and {ValidatesTelephone}[https://github.com/plribeiro3000/validates_telephone].
 
 == Install
 
@@ -16,7 +16,7 @@ end
 
 == Test
 
-The gem has mactchers for shoulda-macros and remarkable.
+This gem has matchers for shoulda-matchers and remarkable.
 
 If you are using shoulda-matchers, add this line to your spec_helper.rb :
     require "validates_cpf/shoulda-matchers/validate_as_cpf_matcher"
@@ -25,8 +25,8 @@ If you are using remarkable, add this line to your spec_helper.rb :
 
 === How?
 
-You should use validates_as_cpf(:attribute) just like any other shoulda matcher.
+You should use validates_as_cpf(:attribute) just like any other shoulda or remarkable matcher.
 
-== Special Thanks
+== Goal
 
-This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and easy macros to test it.
+This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and easy matchers to test it.

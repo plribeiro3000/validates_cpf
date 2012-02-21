@@ -57,7 +57,7 @@ describe CPF do
 
   context "should be valid with" do
     it "nil as number" do
-          CPF.new(nil).should be_valid
+      CPF.new(nil).should be_valid
     end
 
     it "111.444.777-35 as number" do
