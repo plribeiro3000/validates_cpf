@@ -18,6 +18,11 @@ end
 
 Only Rspec supported at the moment. The gem already have macros for shoulda-macros and remarkable.
 
+If you are using shoulda-matchers, add this line to your spec_helper.rb :
+    require "validates_cpf/shoulda-matchers/validate_as_cpf_matcher"
+If you are using remarkable, add this line to your spec_helper.rb :
+    require "validates_cpf/remarkable/validate_as_cpf_matcher"
+
 === How?
 
 You should use validates_as_cpf(:attribute) just like any other shoulda matcher.

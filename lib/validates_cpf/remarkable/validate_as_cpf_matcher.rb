@@ -4,7 +4,7 @@ module Remarkable
   module ActiveRecord
     module Matchers
       class ValidateAsCpfMatcher < Remarkable::ActiveRecord::Base
-        arguments :as => :cpf
+        arguments :cpf
 
         collection_assertions :cpf_valid?, :allow_nil?, :formatted_number?
 
@@ -26,7 +26,7 @@ module Remarkable
         end
       end
 
-      def validates_as_cpf(*args, &block)
+      def validate_as_cpf(*args, &block)
         ValidateAsCpfMatcher.new(*args, &block).spec(self)
       end
     end
