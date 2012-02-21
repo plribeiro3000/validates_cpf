@@ -1,6 +1,6 @@
 = ValidatesCPF {<img src="https://secure.travis-ci.org/plribeiro3000/validates_cpf.png" />}[http://travis-ci.org/plribeiro3000/validates_cpf]
 
-Rails gem to validate CPF
+Rails gem to validate CPF. Don't forget to check {ValidatesCnpj}[https://github.com/plribeiro3000/validates_cnpj].
 
 == Install
 
@@ -16,7 +16,7 @@ end
 
 == Test
 
-Only Rspec supported at the moment. The gem already have macros for shoulda-macros and remarkable.
+The gem has mactchers for shoulda-macros and remarkable.
 
 If you are using shoulda-matchers, add this line to your spec_helper.rb :
     require "validates_cpf/shoulda-matchers/validate_as_cpf_matcher"
