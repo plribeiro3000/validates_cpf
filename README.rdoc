@@ -1,4 +1,4 @@
-= ValidatesCPF
+= ValidatesCPF {<img src="https://secure.travis-ci.org/plribeiro3000/validates_cpf.png" />}[http://travis-ci.org/plribeiro3000/validates_cpf]
 
 Rails gem to validate CPF
 
