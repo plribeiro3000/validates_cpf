@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'shoulda-matchers'
+require 'remarkable/active_record'
 
-describe Shoulda::Matchers::ActiveModel::ValidateAsCpfMatcher do
+describe Remarkable::ActiveRecord::Matchers::ValidateAsCpfMatcher do
   context "on a attribute which validates cpf" do
     it "should require a valid CPF" do
       @user = User.new(:cpf => '123456')

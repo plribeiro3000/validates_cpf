@@ -9,10 +9,9 @@ Gem::Specification.new do |s|
   s.email       = %q{plribeiro3000@gmail.com}
   s.homepage    = ""
   s.summary     = %q{CPF Validation GEM}
-  s.description = %q{Validates CPF, the simple way.}
+  s.description = %q{Validates CPF and test it with macros in a simple way.}
 
   s.add_dependency("activerecord", ">= 3.0.0")
-  s.add_dependency("shoulda-matchers")
 
   s.rubyforge_project = "validates_cpf"
 
@@ -21,6 +20,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = %w(lib)
 
-  s.add_development_dependency "rspec"
+  s.add_development_dependency "rspec", ">= 2.0.0"
+  s.add_development_dependency("shoulda-matchers", ">= 1.0.0")
+  s.add_development_dependency("remarkable_activerecord", "= 4.0.0.alpha4")
   s.add_development_dependency "sqlite3"
 end

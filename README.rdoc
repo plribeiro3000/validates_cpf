@@ -16,7 +16,7 @@ end
 
 == Test
 
-Only Rspec supported at the moment and has shoulda-matchers as dependecy.
+Only Rspec supported at the moment. The gem already have macros for shoulda-macros and remarkable.
 
 === How?
 
@@ -24,4 +24,4 @@ You should use validates_as_cpf(:attribute) just like any other shoulda matcher.
 
 == Special Thanks
 
-This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and macros for test it.
+This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and easy macros to test it.

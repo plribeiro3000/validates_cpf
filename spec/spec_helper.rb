@@ -1,7 +1,6 @@
 require "rubygems"
 require "rspec"
 require "active_record"
-require "shoulda-matchers"
 
 Dir.glob(File.dirname(__FILE__) + "/../lib/**/*.rb").each { |file| require file }
 Dir.glob(File.dirname(__FILE__) + "/fake_app/**/*.rb").each { |file| require file }

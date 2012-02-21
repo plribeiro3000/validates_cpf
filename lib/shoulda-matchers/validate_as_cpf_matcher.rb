@@ -1,3 +1,5 @@
+require "shoulda-matchers"
+
 module Shoulda
   module Matchers
     module ActiveModel
