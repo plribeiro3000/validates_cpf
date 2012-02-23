@@ -30,3 +30,7 @@ You should use validates_as_cpf(:attribute) just like any other shoulda or remar
 == Goal
 
 This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and easy matchers to test it.
+
+== Contribute
+
+Fork the project and send me a Pull Request. =D
