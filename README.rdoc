@@ -19,13 +19,10 @@ Lets say you have a model with "cpf" string column that you want to be a valid C
 
 This gem has buitin matchers for shoulda-matchers and remarkable.
 
-=== How?
+== Notes
 
-You should use require_a_valid_cpf(:attribute) or skip the attribute part if the attribute name is cpf.
+Since version 1.0.0, it isn't necessary to load any file inside your spec_helper anymore.
 
-== Goal
-
-This project is based on brcpfcnpj gem and his intention it to mantain a cleaner code to validate CPF and easy matchers to test it.
 
 == Contribute
 
