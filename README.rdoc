@@ -10,11 +10,10 @@ gem install validates_cpf
 
 Lets say you have a model with "cpf" string column that you want to be a valid CPF. Just add this to your model:
 
-```ruby
-class User < ActiveRecord::Base
+ class User < ActiveRecord::Base
     validates :cpf, :cpf => true
-end
-```
+ end
+
 
 == Test
 
