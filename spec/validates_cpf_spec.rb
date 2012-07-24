@@ -10,7 +10,7 @@ describe CpfValidator do
       @user.valid?.should be_false
     end
 
-    it "should set an error on attribute" do
+    it "should set an error message on attribute" do
       @user.valid?
       @user.errors[:cpf].should == ['is invalid']
     end
@@ -25,7 +25,7 @@ describe CpfValidator do
       @user.valid?.should be_true
     end
 
-    it "should not set an error on attribute" do
+    it "should not set an error message on attribute" do
       @user.valid?
       @user.errors[:cpf].should be_blank
     end

@@ -3,27 +3,23 @@ require "shoulda-matchers"
 module Shoulda
   module Matchers
     module ActiveModel
-      def validate_as_cpf(attr)
-        ValidateAsCpfMatcher.new(attr)
+      def require_a_valid_cpf(attr = :cpf)
+        RequireAValidCpfMatcher.new(attr)
       end
 
-      class ValidateAsCpfMatcher < ValidationMatcher
+      class RequireAValidCpfMatcher < ValidationMatcher
         def initialize(attribute)
           @attribute = attribute
         end
 
         def description
-          "validate #{@attribute} as a valid CPF number"
-        end
-
-        def failure_message
-          "expected #{@attribute} to be validated as a valid CPF number"
+          "require a valid CPF number"
         end
 
         def matches?(subject)
           super(subject)
 
-          disallows_invalid_value and allows_valid_value and allows_nil_value
+          disallows_invalid_value and allows_valid_value
         end
 
         private
@@ -34,10 +30,6 @@ module Shoulda
 
         def allows_valid_value
           allows_value_of("897.546.112-20")
-        end
-
-        def allows_nil_value
-          allows_value_of(nil)
         end
       end
     end
