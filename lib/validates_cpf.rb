@@ -6,6 +6,6 @@ require "validates_cpf/remarkable/require_a_valid_cpf_matcher" if defined?(::Rem
 
 class CpfValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    record.errors[attribute] << I18n.t("errors.messages.invalid") unless CPF.new(value).valid?
+    record.errors[attribute] << I18n.t("activerecord.errors.models.#{record.class.name.downcase}.attributes.#{attribute.to_s}.invalid") unless CPF.new(value).valid?
   end
 end

@@ -4,6 +4,7 @@ describe CpfValidator do
   context "when cpf is invalid" do
     before :each do
       @user = User.new(:cpf => "12345")
+      I18n.stub(:t).with("activerecord.errors.models.user.attributes.cpf.invalid").and_return("is invalid")
     end
 
     it "should set object as invalid" do

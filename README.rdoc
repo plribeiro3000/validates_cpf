@@ -17,7 +17,7 @@ Lets say you have a model with "cpf" string column that you want to be a valid C
 
 == Test
 
-This gem has buitin matchers for shoulda-matchers and remarkable.
+This gem has builtin matchers for shoulda-matchers and remarkable.
 
 == Notes
 
