@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'shoulda-matchers'
+  gem.add_development_dependency 'shoulda-matchers', '2.0.0'
   gem.add_development_dependency 'coveralls'
 
   gem.add_runtime_dependency 'activemodel'
