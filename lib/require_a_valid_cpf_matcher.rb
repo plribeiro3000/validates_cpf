@@ -1,4 +1,4 @@
-require "shoulda-matchers"
+require 'shoulda-matchers'
 
 module Shoulda
   module Matchers
@@ -13,7 +13,7 @@ module Shoulda
         end
 
         def description
-          "require a valid CPF number"
+          'require a valid CPF number'
         end
 
         def matches?(subject)
@@ -25,11 +25,11 @@ module Shoulda
         private
 
         def disallows_invalid_value
-          disallows_value_of("123456")
+          disallows_value_of('123456')
         end
 
         def allows_valid_value
-          allows_value_of("897.546.112-20")
+          allows_value_of('897.546.112-20')
         end
       end
     end
