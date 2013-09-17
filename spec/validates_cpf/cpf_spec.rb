@@ -2,10 +2,6 @@ require 'spec_helper'
 
 describe ValidatesCpf::Cpf do
   context "should be invalid with" do
-    it "blank number" do
-      ValidatesCpf::Cpf.new('').should_not be_valid
-    end
-
     it "345.65.67.3 as number" do
       ValidatesCpf::Cpf.new('345.65.67.3').should_not be_valid
     end
@@ -56,6 +52,10 @@ describe ValidatesCpf::Cpf do
   end
 
   context "should be valid with" do
+    it "blank number" do
+      ValidatesCpf::Cpf.new('').should be_valid
+    end
+
     it "nil as number" do
       ValidatesCpf::Cpf.new(nil).should be_valid
     end

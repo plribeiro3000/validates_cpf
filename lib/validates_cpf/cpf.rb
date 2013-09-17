@@ -10,7 +10,7 @@ module ValidatesCpf
     end
 
     def valid?
-      return true if @number.nil?
+      return true if @number.blank?
       return false unless @pure_number
       check_cpf
     end
