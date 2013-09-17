@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/validates_cpf.png)](http://badge.fury.io/rb/validates_cpf) [![Build Status](https://secure.travis-ci.org/plribeiro3000/validates_cpf.png?branch=master)](http://travis-ci.org/plribeiro3000/validates_cpf) [![Dependency Status](https://gemnasium.com/plribeiro3000/validates_cpf.png)](https://gemnasium.com/plribeiro3000/validates_cpf) [![Coverage Status](https://coveralls.io/repos/plribeiro3000/validates_cpf/badge.png?branch=master)](https://coveralls.io/r/plribeiro3000/validates_cpf)  [![Code Climate](https://codeclimate.com/github/plribeiro3000/validates_cpf.png)](https://codeclimate.com/github/plribeiro3000/validates_cpf)
 
-Rails gem to validate CPF. Don't forget to check {ValidatesCnpj}[https://github.com/plribeiro3000/validates_cnpj], {ValidatesTelephone}[https://github.com/plribeiro3000/validates_telephone] and {ValidatesHost}[https://github.com/plribeiro3000/validates_host].
+Validates cpf and test it in a simple way
 
 ## Installation
 
