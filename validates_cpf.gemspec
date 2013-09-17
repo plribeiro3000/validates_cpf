@@ -6,11 +6,11 @@ Gem::Specification.new do |gem|
   gem.version     = ValidatesCpf::VERSION
   gem.authors     = %q{Paulo Henrique Lopes Ribeiro}
   gem.email       = %q{plribeiro3000@gmail.com}
-  gem.description = %q{Validates CPF and test it with matchers in a simple way.}
+  gem.summary     = %q{Validates CPF and test it with matchers in a simple way.}
 
-  gem.files         = `git ls-files`.split('\n')
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split('\n')
-  gem.executables   = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }
+  gem.files         = `git ls-files`.split("\n")
+  gem.test_files    = `git ls-files -- {test,spec,features,examples,gemfiles}/*`.split("\n")
+  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.require_paths = %w(lib)
 
   gem.license = 'MIT'
