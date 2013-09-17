@@ -20,11 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-Lets say you have a model with "cpf" string column that you want to be a valid CPF. Just add this to your model:
+Just use as any other validator:
 
- class User < ActiveRecord::Base
+```ruby
+class User < ActiveRecord::Base
     validates :cpf, :cpf => true
- end
+end
+```
 
 ## Notes
 
