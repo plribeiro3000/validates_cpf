@@ -1,5 +1,5 @@
-require 'cpf_validator'
-require 'require_a_valid_cpf_matcher' if defined?(::Shoulda)
+require 'validates_cpf/cpf_validator'
+require 'validates_cpf/require_a_valid_cpf_matcher' if defined?(::Shoulda)
 
 module ValidatesCpf
   autoload :Cpf, 'validates_cpf/cpf'
