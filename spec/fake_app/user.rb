@@ -1,15 +1,10 @@
+# frozen_string_literal: true
+
 class User
-  include ActiveModel::Validations
-  include ActiveModel::Conversion
-  extend ActiveModel::Naming
+  include ActiveModel::Model
 
-  attr_accessor :cpf, :name
+  attr_accessor :cpf, :masked_cpf, :name
 
-  validates :cpf, :cpf => true
-
-  def initialize(attributes = {})
-    attributes.each do |key, value|
-      instance_variable_set("@#{key}", value)
-    end
-  end
+  validates :cpf, cpf: true
+  validates :masked_cpf, cpf: { mask: true }
 end

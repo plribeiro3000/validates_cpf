@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/validates_cpf.png)](http://badge.fury.io/rb/validates_cpf) [![Build Status](https://secure.travis-ci.org/plribeiro3000/validates_cpf.png?branch=master)](http://travis-ci.org/plribeiro3000/validates_cpf) [![Dependency Status](https://gemnasium.com/plribeiro3000/validates_cpf.png)](https://gemnasium.com/plribeiro3000/validates_cpf) [![Coverage Status](https://coveralls.io/repos/plribeiro3000/validates_cpf/badge.png?branch=master)](https://coveralls.io/r/plribeiro3000/validates_cpf)  [![Code Climate](https://codeclimate.com/github/plribeiro3000/validates_cpf.png)](https://codeclimate.com/github/plribeiro3000/validates_cpf)
 
-Validates cpf and test it in a simple way
+Validates cpf and test it in a simple way. Depends on ruby `>= 2.2`. For older ruby versions use the version `2` series.
 
 ## Installation
 
@@ -24,16 +24,32 @@ Just use as any other validator:
 
 ```ruby
 class User < ActiveRecord::Base
-    validates :cpf, :cpf => true
+  validates :cpf, cpf: true
 end
 ```
 
-## Notes
+To force the attribute to be masked pass option `mask`:
 
-It will load a macher to test automatically if the gem is below shoulda-matchers.
+```ruby
+class User < ActiveRecord::Base
+  validates :cpf, cpf: { mask: true }
+end
+```
 
-## Mantainers
-[@plribeiro3000](https://github.com/plribeiro3000)
+## Testing
+
+Require the matcher:
+
+```ruby
+require 'validates_cpf/require_a_valid_matcher'
+```
+
+Use in your tests:
+
+```ruby
+it { is_expected.to require_a_valid_cpf } # It will test the attribute :cpf by default
+it { is_expected.to require_a_valid_cpf(:id) }
+```
 
 ## Contributing
 
