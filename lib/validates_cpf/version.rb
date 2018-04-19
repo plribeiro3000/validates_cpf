@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module ValidatesCpf
-  VERSION = '2.0.1'.freeze
+  VERSION = '3.0.0'.freeze
 end
