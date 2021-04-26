@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 require File.expand_path('lib/validates_cpf/version', __dir__)
@@ -20,10 +19,9 @@ Gem::Specification.new do |gem|
   gem.license = 'MIT'
 
   gem.add_development_dependency 'coveralls'
-  gem.add_development_dependency 'jazz_fingers'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'rubocop', '< 0.68'
   gem.add_development_dependency 'rubocop-rspec'
   gem.add_development_dependency 'shoulda-matchers'
 
