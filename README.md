@@ -2,7 +2,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/validates_cpf.png)](http://badge.fury.io/rb/validates_cpf) [![Build Status](https://secure.travis-ci.org/plribeiro3000/validates_cpf.png?branch=master)](http://travis-ci.org/plribeiro3000/validates_cpf) [![Dependency Status](https://gemnasium.com/plribeiro3000/validates_cpf.png)](https://gemnasium.com/plribeiro3000/validates_cpf) [![Coverage Status](https://coveralls.io/repos/plribeiro3000/validates_cpf/badge.png?branch=master)](https://coveralls.io/r/plribeiro3000/validates_cpf)  [![Code Climate](https://codeclimate.com/github/plribeiro3000/validates_cpf.png)](https://codeclimate.com/github/plribeiro3000/validates_cpf)
 
-Validates cpf and test it in a simple way. Depends on ruby `>= 2.2`. For older ruby versions use the version `2` series.
+Validates cpf and test it in a simple way.
+Supports ruby 2.2+ and rails 3+. For older ruby versions use the version `2`.
 
 ## Installation
 

@@ -14,6 +14,7 @@ module ValidatesCpf
     def valid?
       return true if @number.blank?
       return false unless @pure_number
+
       check_cpf
     end
 
@@ -23,6 +24,7 @@ module ValidatesCpf
 
     def check_cpf
       return false if @cleaned_number.length != 11 || @cleaned_number.scan(/\d/).uniq.length == 1
+
       @result == first_digit_verifier + second_digit_verifier
     end
 
